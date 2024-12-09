@@ -93,5 +93,6 @@ class OpenAI_API:
             stream=False,
             extra_headers=headers
         )
+        content = response.choices[0].message.content
 
-        return (response.choices[0].message["content"],)
+        return (content,)
